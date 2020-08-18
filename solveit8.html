@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <p>Ketik kalimat:
+            <br><input type="text">
+        </p>
+        <p>Karakter yang dicari: 
+            <br><input type="text">
+        </p>
+    </form>
+    <button onclick="fungsiCariKarakter()">Cari!</button>
+    <p id="tes"></p>
+    <script>
+        function fungsiCariKarakter(){
+            let input1=document.getElementById("form").elements[0].value;
+            let input2=document.getElementById("form").elements[1].value;
+            document.getElementById("tes").innerHTML='<b>Jumlah '+"'"+input2+"'"+' sebanyak '+(input1.split(input2).length-1)+' buah</b>'
+        }
+    </script>
+</body>
+</html>
